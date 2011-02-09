@@ -9,6 +9,7 @@ set number
 set invlist
 set listchars=tab:▸\ ,eol:¬
 set undofile
+set hlsearch
 
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
@@ -21,3 +22,6 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
  " Visually select the text that was last edited/pasted
  nmap gV `[v`]
+
+ " Press F4 to toggle highlighting on/off, and show current value.
+ :noremap <F4> :set hlsearch! hlsearch?<CR>
