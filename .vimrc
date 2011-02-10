@@ -9,7 +9,7 @@ set number
 set invlist
 set listchars=tab:▸\ ,eol:¬
 set undofile
-set hlsearch
+set incsearch
 
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
