@@ -67,5 +67,5 @@ set laststatus=2
 " movement by screenline instead of file line
 nnoremap j gj
 nnoremap k gk
-nnoremap <Up> gj
-nnoremap <Down> gk
+nnoremap <Down> gj
+nnoremap <Up> gk
