@@ -18,7 +18,7 @@ set listchars=tab:▸\ ,eol:¬
 set undofile
 set incsearch
 
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Bubble single lines
 nmap <C-Up> [e
@@ -42,6 +42,7 @@ nnoremap <leader>s :NERDTreeToggle<cr>
 " toggle Command-T with \v
 nnoremap <leader>v :CommandT<cr>
 nmap <F5> :CommandTFlush<CR>
+let g:CommandTMaxFiles=100000
 
 " Remember last location in file
 if has("autocmd")
@@ -94,10 +95,10 @@ nnoremap <Leader>h <C-w>s<C-w>j
 nnoremap <Leader>v <C-w>v<C-w>l
 
 " Switch window positions
-nnoremap <Leader>x <C-w>x
+nnoremap <Leader>X <C-w>x
 
 " Close window
-nnoremap <Leader>c <C-w>c
+nnoremap <Leader>x <C-w>c
 
 " Navigation
 nmap <C-h> <C-w>h
@@ -117,6 +118,8 @@ set timeoutlen=250
 
 " We have a fast terminal connection
 set ttyfast
+" Enable the use of a mouse from a terminal
+set mouse=a
 
 " Saving, undoing, backups & files
 set backup                     " Enable creation of backup file.
@@ -139,3 +142,6 @@ set fillchars=vert:\
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline nocursorcolumn
 set cursorline nocursorcolumn
+
+" Add Gundo key mapping
+nnoremap <Leader>G :GundoToggle<CR>
